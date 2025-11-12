@@ -19,6 +19,7 @@ public abstract class Usuario {
         placas.add(placa);
     }
 
+
     public abstract boolean registrarVeiculo(String placa);
 
     public void removerVeiculo(String placa){
@@ -26,6 +27,7 @@ public abstract class Usuario {
     }
 
     public abstract double calculaValorEstacionamento(Acesso acesso);
+
 
     public Set<String> getPlacas() {
         return placas;

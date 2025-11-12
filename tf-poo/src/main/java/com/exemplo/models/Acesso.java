@@ -10,10 +10,10 @@ public class Acesso {
 
 
 
-    public Acesso(Usuario usuario, String placa, LocalDateTime dataEntrada) {
+    public Acesso(Usuario usuario, String placa) {
         this.usuario = usuario;
         this.placa = placa;
-        this.dataEntrada = dataEntrada;
+        this.dataEntrada = LocalDateTime.now();
     }
 
     public Usuario getUsuario() { return this.usuario; }
