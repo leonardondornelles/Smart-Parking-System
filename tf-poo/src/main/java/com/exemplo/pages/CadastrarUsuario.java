@@ -6,6 +6,8 @@ import com.exemplo.models.Funcionario;
 import com.exemplo.models.GerenciadorUsuarios;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
@@ -25,6 +27,7 @@ public class CadastrarUsuario extends VerticalLayout {
 
 
     public CadastrarUsuario(){
+        add(new H1("Cadastrar Usuário"), new Hr());
         nomeUsuario = new TextField("Nome: ");
         tipoUsuario = new ComboBox<>("Tipo de usuário");
         tipoUsuario.setItems("Funcionário", "Estudante", "Empresa");

@@ -7,6 +7,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.combobox.ComboBox;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
@@ -21,12 +22,15 @@ public class Informacao extends VerticalLayout {
     Text text;
     H1 h1Estacionado;
     H1 h1Retirado;
+    H1 h1Empresa;
 
     public Informacao(){
+        add(new H1("Informações"), new Hr());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         text = new Text("");
         h1Estacionado = new H1("Carros Estacionados");
         h1Retirado = new H1("Carros Retirados");
+        h1Empresa = new H1("Valor Gasto Por Empresa");
         gridEstacionado = new Grid<>(Acesso.class, false);
         gridEstacionado.setItems(Estacionamento.carrosEstacionados.values());
         gridEstacionado.addColumn(Acesso::getNome).setHeader("Usuário");
@@ -47,7 +51,6 @@ public class Informacao extends VerticalLayout {
 
         comboEmpresa = new ComboBox<>("Empresa");
         comboEmpresa.setItems(GerenciadorUsuarios.listaDeEmpresas());
-        add(new H1("Valor Gasto pela Empresa: "), comboEmpresa);
         comboEmpresa.addValueChangeListener(e -> {
             Empresa empresa = (Empresa) GerenciadorUsuarios.acharUsuarioPorNome(comboEmpresa.getValue());
             text.setText("Valor: R$ " + empresa.getValorTotalMensal());
@@ -57,6 +60,6 @@ public class Informacao extends VerticalLayout {
 
         voltar = new Button("Voltar");
         voltar.addClickListener(e -> UI.getCurrent().navigate("inicial"));
-        add(h1Estacionado, gridEstacionado, h1Retirado, gridRetirados, comboEmpresa, text, voltar);
+        add(h1Estacionado, gridEstacionado, h1Retirado, gridRetirados,h1Empresa, comboEmpresa, text, voltar);
     }
 }

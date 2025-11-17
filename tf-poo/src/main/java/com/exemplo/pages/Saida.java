@@ -1,6 +1,8 @@
 package com.exemplo.pages;
 
 import com.exemplo.models.*;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.component.UI;
@@ -25,6 +27,7 @@ public class Saida extends VerticalLayout {
     Button voltar;
 
     public Saida(){
+        add(new H1("Saída"), new Hr());
         nomeUsuario = new ComboBox<>("Nome");
         nomeUsuario.setItems(listarUsuariosEstacionados());
 

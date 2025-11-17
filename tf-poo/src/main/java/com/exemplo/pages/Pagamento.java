@@ -1,6 +1,8 @@
 package com.exemplo.pages;
 
 import com.exemplo.models.*;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.component.UI;
@@ -20,6 +22,7 @@ public class Pagamento extends VerticalLayout {
 
 
     public Pagamento(){
+        add(new H1("Pagamento"), new Hr());
         nomeEstudante = new ComboBox<>("Nome");
         nomeEstudante.setItems(GerenciadorUsuarios.listaDeEstudantes());
         valor = new ComboBox<>("Valor");

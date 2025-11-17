@@ -3,6 +3,8 @@ package com.exemplo.pages;
 import com.exemplo.models.*;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.combobox.ComboBox;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Hr;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
@@ -20,6 +22,7 @@ public class Entrada extends VerticalLayout {
     private Button voltar;
 
     public Entrada(){
+        add(new H1("Entrada"), new Hr());
         nomeUsuario = new ComboBox<>("Nome");
         nomeUsuario.setItems(GerenciadorUsuarios.listaDeNomes());
 
