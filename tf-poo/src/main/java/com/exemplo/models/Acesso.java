@@ -23,4 +23,12 @@ public class Acesso {
     public LocalDateTime getDataSaida() { return this.dataSaida; }
 
     public void setDataSaida(LocalDateTime saida) { this.dataSaida = saida; }
+
+    public String getNome(){
+        return usuario.getNome();
+    }
+
+    public String getPlaca(){
+        return placa;
+    }
 }

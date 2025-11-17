@@ -39,6 +39,10 @@ public class GerenciadorUsuarios {
         return gerenciadorUsuario.stream().filter(u -> u instanceof Estudante).map(Usuario::getNome).toList();
     }
 
+    public static List<String> listaDeEmpresas(){
+        return gerenciadorUsuario.stream().filter(u -> u instanceof Empresa).map(Usuario::getNome).toList();
+    }
+
     public static String acharNomePorPlaca(String placa){
         return gerenciadorUsuario.stream().filter(u -> u.getPlacas().contains(placa)).map(Usuario::getNome)
                 .findFirst().orElse(null);

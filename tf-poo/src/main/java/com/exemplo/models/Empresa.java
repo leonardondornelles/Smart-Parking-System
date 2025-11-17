@@ -20,7 +20,7 @@ public class Empresa extends Usuario{
 
     public void adicionarValorMensal(LocalDateTime l1, LocalDateTime l2){
         long horasEstacionadas = ChronoUnit.HOURS.between(l1, l2);
-        valorTotalMensal += horasEstacionadas * 1.5;
+        valorTotalMensal += (horasEstacionadas + 1) * 1.5;
     }
 
     @Override
