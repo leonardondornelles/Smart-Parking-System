@@ -57,7 +57,7 @@ O projeto foi estruturado seguindo as boas práticas de separação de responsab
 
 | Relatório Financeiro | Operação de Cancela |
 |:---:|:---:|
-| ![Financeiro](tf-poo/assets/relatorio-financeiro.png) | ![Cancela](tf-poo/assets/saida.png) |
+| ![Financeiro](tf-poo/assets/relatorio-financeiro.png) |
 
 ## 🔧 Como Executar
 
