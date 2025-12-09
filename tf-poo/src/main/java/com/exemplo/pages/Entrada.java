@@ -14,7 +14,7 @@ import com.vaadin.flow.component.notification.Notification;
 import java.time.LocalDateTime;
 
 
-@Route("entrada")
+@Route(value="entrada", layout = MainLayout.class)
 public class Entrada extends VerticalLayout {
     private ComboBox<String> nomeUsuario;
     private ComboBox<String> placaComboBox;

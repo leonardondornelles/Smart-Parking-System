@@ -11,7 +11,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-@Route("editar-placa")
+@Route(value="editar-placa", layout = MainLayout.class)
 public class EditarPlaca extends VerticalLayout {
 
     private ComboBox<String> nomeComboBox;

@@ -18,7 +18,7 @@ import com.vaadin.flow.component.notification.Notification;
 
 
 
-@Route("cadastrar-usuario")
+@Route(value="cadastrar-usuario", layout = MainLayout.class)
 public class CadastrarUsuario extends VerticalLayout {
     TextField nomeUsuario;
     ComboBox<String> tipoUsuario;

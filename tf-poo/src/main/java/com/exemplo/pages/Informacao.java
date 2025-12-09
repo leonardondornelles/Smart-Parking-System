@@ -13,7 +13,7 @@ import com.vaadin.flow.router.Route;
 
 import java.time.format.DateTimeFormatter;
 
-@Route("informacao")
+@Route(value="informacao", layout = MainLayout.class)
 public class Informacao extends VerticalLayout {
     Grid<Acesso> gridEstacionado;
     Grid<Acesso> gridRetirados;

@@ -13,7 +13,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.component.notification.Notification;
 
-@Route("pagamento")
+@Route(value="pagamento", layout = MainLayout.class)
 public class Pagamento extends VerticalLayout {
     ComboBox<String> nomeEstudante;
     ComboBox<Integer> valor;

@@ -19,7 +19,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-@Route("saida")
+@Route(value="saida", layout = MainLayout.class)
 public class Saida extends VerticalLayout {
     ComboBox<String> nomeUsuario;
     ComboBox<String> placasEstacionadas;
