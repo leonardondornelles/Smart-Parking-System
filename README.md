@@ -56,7 +56,7 @@ O projeto foi estruturado seguindo as boas práticas de separação de responsab
 | ![Home](tf-poo/assets/tela-inical.png) | ![Cadastro](tf-poo/assets/cadastro-usuario.png) |
 
 | Relatório Financeiro |
-|:---:|:---:|
+
 | ![Financeiro](tf-poo/assets/relatorio-financeiro.png) |
 
 ## 🔧 Como Executar
