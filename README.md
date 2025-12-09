@@ -1,20 +1,85 @@
-# Desenvolvimento Java 21
-- Repositório base para uso em disciplinas de desenvolvimento de software
-- Configurado para desenvolvimento em Java21 
-- Pensado para ser usado como "Monorepo" para uma série de projetos de aula
-- As instruções a seguir referem-se ao uso deste repositório em conjunto com o CodeSpaces
+# 🚗 Sistema de Gerenciamento de Estacionamento - PUCRS
 
-## Criação de Projetos Java Básicos
-O script "create-project.sh" cria um projeto Maven/Java básico para ser usado em disciplinas de algoritmos e programação
-- Para que o uso deste script seja possível é necessário que o mesmo tenha permissão de execução. Antes de usar o script pela primeira vez use o comando: `chmod +x create-project.sh`
-- Para criar um projeto usando o script use o comando: `./create-project.sh com.exemplo meu-projeto`
-- Para compilar e executar o projeto use as opções do VSCode
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Vaadin](https://img.shields.io/badge/Vaadin-Flow-00B4F0?style=for-the-badge&logo=vaadin&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.0-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge)
 
-## Criação de projetos usando Vaadin
-O script "create-vaadin-project.sh" cria um projeto Maven/Spring-Boot/Vaadin para ser usado em disciplinas de programação
-- Para que o uso deste script seja possível é necessário que o mesmo tenha permissão de execução. Antes de usar o script pela primeira vez use o comando: `chmod +x create-vaadin-project.sh`
-- Para criar um projeto usando o script use o comando: `./create-vaadin-project.sh com.exemplo meu-projeto`
-- Para compilar e executar o projeto use o comando: `mvn spring-boot:run`
+> Trabalho final da disciplina de Programação Orientada a Objetos (2025/2).
 
-## Criação de projetos SpringBoot
-- Use o plugin de criação de projetos Spring-Boot do VSCode
+## 📋 Sobre o Projeto
+
+Este sistema é uma aplicação web full-stack desenvolvida para gerenciar o controle de acesso e o fluxo financeiro de um estacionamento universitário (PUCRS). O foco principal do projeto foi a aplicação prática dos pilares da **Orientação a Objetos** e o uso de recursos avançados do Java.
+
+O sistema controla a entrada e saída de veículos, aplicando regras de negócio e tarifação dinâmicas baseadas no tipo de usuário (Alunos, Funcionários e Profissionais do Tecnopuc).
+
+## 🚀 Tecnologias Utilizadas
+
+* **Java 17:** Linguagem base.
+* **Vaadin Flow:** Framework para construção da interface web (UI) inteiramente em Java.
+* **Spring Boot:** Para injeção de dependências e execução do servidor.
+* **Java Collections Framework:** Listas, Mapas e Sets para gerenciamento de dados em memória.
+* **Java Streams & Lambdas:** Para relatórios e processamento de dados financeiros.
+* **Java Time API:** Para cálculos precisos de duração e datas.
+
+## ⚙️ Arquitetura e Conceitos de POO Aplicados
+
+O projeto foi estruturado seguindo as boas práticas de separação de responsabilidades e design de software:
+
+* **Herança e Polimorfismo:**
+    * Classe abstrata `Usuario` definindo o contrato básico.
+    * Subclasses `Estudante`, `FuncPucrs` e `ProfissionalTecno` implementando regras específicas de cobrança e limites de veículos (`@Override`).
+* **Encapsulamento:** Proteção dos dados sensíveis (como listas de placas) e acesso via métodos controlados.
+* **Associação:** Relacionamento entre `ProfissionalTecno` e `Empresa`.
+* **Design Pattern (Strategy/Template Method):** O cálculo do valor do estacionamento varia conforme a implementação da classe filha, transparente para o sistema principal.
+
+## 🌟 Funcionalidades
+
+### Controle de Acesso
+- [x] **Registro de Entrada:** Validação de vaga, cadastro prévio e verificação de lotação.
+- [x] **Registro de Saída:** Cálculo automático do valor a pagar baseado no tempo de permanência (com tolerância de 15min).
+
+### Gestão de Usuários (Regras de Negócio)
+* **Funcionários:** Isentos de pagamento. Limite de 2 carros.
+* **Estudantes:** Tarifa fixa por acesso. Sistema de créditos/débito.
+* **Profissionais (Tecnopuc):** Tarifa por hora (fração de 15min). Cobrança mensal via contrato com a empresa.
+
+### Módulo Financeiro & Relatórios
+- [x] Geração de boletos para empresas conveniadas.
+- [x] Histórico de acessos filtrado por data e usuário.
+- [x] Uso de Streams para agregação de dados e cálculo de receita.
+
+## 📸 Screenshots
+
+| Tela Inicial | Cadastro de Usuário |
+|:---:|:---:|
+| ![Home](assets/home.png) | ![Cadastro](assets/cadastro.png) |
+
+| Relatório Financeiro | Operação de Cancela |
+|:---:|:---:|
+| ![Financeiro](assets/financeiro.png) | ![Cancela](assets/cancela.png) |
+
+## 🔧 Como Executar
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/SEU-USUARIO/NOME-DO-REPO.git](https://github.com/SEU-USUARIO/NOME-DO-REPO.git)
+    ```
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd NOME-DO-REPO
+    ```
+3.  **Execute via Maven (Spring Boot):**
+    ```bash
+    ./mvnw spring-boot:run
+    ```
+4.  **Acesse no navegador:**
+    Abra `http://localhost:8080`
+
+## 👥 Autores
+
+| [<img src="https://avatars.githubusercontent.com/u/SEU_ID_AQUI?v=4" width=115><br><sub>Leonardo Dornelles</sub>](https://github.com/SEU-USUARIO) | [<img src="https://avatars.githubusercontent.com/u/ID_COLEGA?v=4" width=115><br><sub>Nome do Colega 2</sub>](https://github.com/USUARIO-COLEGA) | [<img src="https://avatars.githubusercontent.com/u/ID_COLEGA?v=4" width=115><br><sub>Nome do Colega 3</sub>](https://github.com/USUARIO-COLEGA) |
+| :---: | :---: | :---: |
+
+---
+*Projeto desenvolvido para a disciplina de POO - PUCRS.*
