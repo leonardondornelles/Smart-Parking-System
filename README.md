@@ -76,4 +76,9 @@ O projeto foi estruturado seguindo as boas práticas de separação de responsab
 4.  **Acesse no navegador:**
     Abra `http://localhost:8080`
 
+## 👨‍💻 Autores
+
+| [<img src="https://github.com/leonardondornelles.png" width=115><br><sub>Leonardo Dornelles</sub>](https://github.com/leonardondornelles) | [<img src="https://github.com/nmic12.png" width=115><br><sub>Nicolas Michels</sub>](https://github.com/nmic12) | [<img src="https://github.com/EduardoAuler.png" width=115><br><sub>Eduardo Grines</sub>](https://github.com/EduardoAuler) |
+| :---: | :---: | :---: |
+
 *Projeto desenvolvido para a disciplina de POO - PUCRS.*
